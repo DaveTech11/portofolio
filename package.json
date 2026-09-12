@@ -1,0 +1,17 @@
+{
+  "name": "dave-tech-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dave Tech portfolio with a Node.js contact backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
+  }
+}
