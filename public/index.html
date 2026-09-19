@@ -391,12 +391,6 @@
       <button class="pill-btn" id="sendBtn" type="submit" style="justify-self:start;">Send message</button>
       <p id="formStatus" style="color:var(--ink-dim);font-size:.9rem;"></p>
     </form>
-    <!--
-      This form currently has no backend. To make it actually deliver
-      messages, either:
-        1) Point the form at a service like Formspree/Getform (no server needed), or
-        2) Wire it to a small Node.js endpoint that emails or Telegrams you the submission.
-    -->
   </div>
 </section>
 
@@ -436,14 +430,25 @@
     };
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formspree.io/f/mvkgzgew', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(data)
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          projectType: data.projectType || 'Not specified',
+          message: data.message
+        })
       });
-      const result = await response.json();
 
-      if (!response.ok) throw new Error(result.error || 'Unable to send message.');
+      if (!response.ok) {
+        const result = await response.json().catch(() => ({}));
+        const errMsg = (result.errors || []).map(e => e.message).join(', ');
+        throw new Error(errMsg || 'Unable to send message.');
+      }
 
       formStatus.textContent = 'Message sent successfully.';
       contactForm.reset();
