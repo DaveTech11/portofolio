@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dave Tech — Bot Developer & Automation Engineer</title>
+<title>Dave Tech — Full-Stack Developer & AI Automation Engineer</title>
 
-<meta name="description" content="Dave Tech builds professional WhatsApp bots, Telegram bots, AI-powered tools, APIs, automation systems and modern web applications for businesses and creators.">
+<meta name="description" content="Dave Tech creates professional websites, web applications, WhatsApp and Telegram bots, AI-powered tools, APIs and automation systems for businesses, creators and startups.">
 
-<meta name="keywords" content="WhatsApp bot developer, Telegram bot developer, Node.js developer, automation engineer, JavaScript developer, AI automation, Fiverr developer">
+<meta name="keywords" content="website developer, web developer, full-stack developer, WhatsApp bot developer, Telegram bot developer, Node.js developer, JavaScript developer, AI automation, Fiverr developer">
 
 <meta name="author" content="Dave Tech">
 
-<meta property="og:title" content="Dave Tech — Bot Developer & Automation Engineer">
-<meta property="og:description" content="Professional WhatsApp bots, Telegram bots, automation systems, APIs and web applications.">
+<meta property="og:title" content="Dave Tech — Full-Stack Developer & AI Automation Engineer">
+<meta property="og:description" content="Professional websites, web apps, WhatsApp & Telegram bots, AI tools, APIs and automation systems.">
 <meta property="og:type" content="website">
 
 <style>
@@ -242,6 +242,12 @@ header{
   box-shadow:0 10px 30px rgba(255,180,84,.18);
 }
 
+.btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+  transform:none;
+}
+
 /* ================= HERO ================= */
 
 .hero{
@@ -254,7 +260,7 @@ header{
 
 .hero-content{
   width:100%;
-  max-width:850px;
+  max-width:900px;
   margin:auto;
 }
 
@@ -291,9 +297,18 @@ header{
   color:var(--accent);
 }
 
+.hero-role{
+  margin-top:20px;
+  color:var(--accent);
+  font-family:var(--mono);
+  font-size:.85rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
 .hero-subtitle{
-  max-width:650px;
-  margin:28px auto 0;
+  max-width:700px;
+  margin:25px auto 0;
   color:var(--muted);
   font-size:clamp(1rem,2vw,1.2rem);
 }
@@ -346,7 +361,7 @@ header{
 
 .stat strong{
   display:block;
-  font-size:1.8rem;
+  font-size:1.6rem;
 }
 
 .stat span{
@@ -383,7 +398,7 @@ h2{
 .section-description{
   margin-top:15px;
   color:var(--muted);
-  max-width:590px;
+  max-width:620px;
 }
 
 /* ================= SERVICES ================= */
@@ -478,11 +493,11 @@ h2{
   border:1px solid var(--line);
   border-radius:var(--radius);
   padding:28px;
+  position:relative;
 }
 
 .package.featured{
   border-color:var(--accent);
-  position:relative;
 }
 
 .package-label{
@@ -667,55 +682,35 @@ h2{
   font-size:.78rem;
 }
 
-/* ================= TESTIMONIALS ================= */
+/* ================= CLIENT EXPERIENCE ================= */
 
-.testimonials{
+.client-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
   margin-top:50px;
 }
 
-.testimonial{
+.client-card{
   background:var(--card);
   border:1px solid var(--line);
   border-radius:var(--radius);
   padding:28px;
 }
 
-.stars{
-  color:var(--accent);
-  letter-spacing:3px;
+.client-icon{
+  font-size:22px;
+  margin-bottom:18px;
 }
 
-.testimonial p{
-  margin-top:18px;
+.client-card h3{
+  font-size:1rem;
+}
+
+.client-card p{
   color:var(--muted);
-  font-size:.9rem;
-}
-
-.client{
-  margin-top:25px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.avatar{
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  background:var(--bg2);
-  border:1px solid var(--line);
-  display:grid;
-  place-items:center;
-  font-family:var(--mono);
-  font-size:.7rem;
-}
-
-.client small{
-  display:block;
-  color:var(--muted);
+  font-size:.86rem;
+  margin-top:10px;
 }
 
 /* ================= ABOUT ================= */
@@ -781,6 +776,10 @@ summary{
   gap:20px;
 }
 
+summary::-webkit-details-marker{
+  display:none;
+}
+
 summary:after{
   content:"+";
   color:var(--accent);
@@ -827,6 +826,7 @@ details p{
   border-radius:10px;
   display:flex;
   justify-content:space-between;
+  gap:15px;
   color:var(--muted);
   font-size:.85rem;
 }
@@ -937,6 +937,7 @@ footer{
     background:var(--bg);
     padding:25px 20px;
     z-index:99;
+    overflow-y:auto;
   }
 
   .mobile-menu.active{
@@ -969,7 +970,7 @@ footer{
 
   .services-grid,
   .packages,
-  .testimonials{
+  .client-grid{
     grid-template-columns:1fr 1fr;
   }
 
@@ -1000,6 +1001,10 @@ footer{
     min-height:68px;
   }
 
+  .mobile-menu{
+    inset:68px 0 0;
+  }
+
   .hero{
     min-height:auto;
     padding:85px 0 70px;
@@ -1007,6 +1012,10 @@ footer{
 
   .hero h1{
     font-size:clamp(3rem,17vw,5rem);
+  }
+
+  .hero-role{
+    font-size:.7rem;
   }
 
   .hero-subtitle{
@@ -1032,13 +1041,13 @@ footer{
   }
 
   .stat strong{
-    font-size:1.45rem;
+    font-size:1.3rem;
   }
 
   .services-grid,
   .packages,
   .projects,
-  .testimonials,
+  .client-grid,
   .skills-layout,
   .about-grid{
     grid-template-columns:1fr;
@@ -1047,7 +1056,7 @@ footer{
   .services-grid,
   .packages,
   .projects,
-  .testimonials{
+  .client-grid{
     margin-top:35px;
   }
 
@@ -1071,6 +1080,11 @@ footer{
   .contact-box{
     padding:25px 18px;
     gap:35px;
+  }
+
+  .contact-link{
+    flex-direction:column;
+    gap:5px;
   }
 
   .footer-inner{
@@ -1102,11 +1116,14 @@ footer{
     scroll-behavior:auto;
   }
 
-  *,
-  *:before,
-  *:after{
+  *{
     animation:none!important;
     transition:none!important;
+  }
+
+  .reveal{
+    opacity:1;
+    transform:none;
   }
 }
 </style>
@@ -1117,6 +1134,7 @@ footer{
 <!-- ================= HEADER ================= -->
 
 <header>
+
   <div class="container nav">
 
     <a href="#" class="logo">
@@ -1134,7 +1152,12 @@ footer{
     </nav>
 
     <div class="nav-actions">
-      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+
+      <button
+        class="theme-btn"
+        id="themeToggle"
+        aria-label="Toggle theme"
+      >
         ◐
       </button>
 
@@ -1142,15 +1165,21 @@ footer{
         Hire me
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+      >
         ☰
       </button>
+
     </div>
 
   </div>
+
 </header>
 
-<!-- MOBILE MENU -->
+<!-- ================= MOBILE MENU ================= -->
 
 <div class="mobile-menu" id="mobileMenu">
 
@@ -1163,8 +1192,10 @@ footer{
     <a href="#about">About</a>
     <a href="#faq">FAQ</a>
 
-    <a href="#contact"
-       class="btn btn-accent mobile-contact">
+    <a
+      href="#contact"
+      class="btn btn-accent mobile-contact"
+    >
       Start a project →
     </a>
 
@@ -1189,10 +1220,15 @@ footer{
       Dave <span>Tech</span>
     </h1>
 
+    <div class="hero-role">
+      Full-Stack Developer · AI & Automation Engineer
+    </div>
+
     <p class="hero-subtitle">
-      Bot Developer & Automation Engineer building
+      I create professional websites, web applications,
       WhatsApp bots, Telegram bots, AI-powered tools,
-      APIs and automation systems that actually work.
+      APIs and automation systems that are built around
+      your actual needs.
     </p>
 
     <div class="hero-buttons">
@@ -1209,10 +1245,10 @@ footer{
 
     <div class="hero-trust">
 
+      <span>✓ Websites & Web Apps</span>
       <span>✓ JavaScript / Node.js</span>
       <span>✓ WhatsApp & Telegram</span>
-      <span>✓ API Integration</span>
-      <span>✓ AI Automation</span>
+      <span>✓ AI & Automation</span>
 
     </div>
 
@@ -1229,18 +1265,18 @@ footer{
     <div class="stats reveal">
 
       <div class="stat">
-        <strong>20+</strong>
-        <span>Projects & Builds</span>
+        <strong>Web</strong>
+        <span>Websites & Applications</span>
       </div>
 
       <div class="stat">
-        <strong>24/7</strong>
-        <span>Automation Systems</span>
+        <strong>AI</strong>
+        <span>AI-Powered Solutions</span>
       </div>
 
       <div class="stat">
         <strong>Node.js</strong>
-        <span>Backend Stack</span>
+        <span>Backend Development</span>
       </div>
 
       <div class="stat">
@@ -1265,17 +1301,67 @@ footer{
       <div class="eyebrow">Services</div>
 
       <h2>
-        Automation built around your business.
+        Websites, apps and automation built around your idea.
       </h2>
 
       <p class="section-description">
-        I build practical software that removes repetitive work,
-        connects your tools and gives your users a better experience.
+        I create professional digital products from scratch —
+        responsive websites, web applications, bots, AI tools,
+        APIs and automation systems designed around your needs.
       </p>
 
     </div>
 
     <div class="services-grid">
+
+      <!-- WEBSITE -->
+
+      <article class="service-card reveal">
+
+        <div class="service-icon">◫</div>
+
+        <h3>Website Development</h3>
+
+        <p>
+          I create professional, responsive websites from
+          scratch for businesses, creators, portfolios,
+          startups and online services.
+        </p>
+
+        <ul class="service-list">
+          <li>Business websites</li>
+          <li>Landing pages</li>
+          <li>Portfolio websites</li>
+          <li>Mobile responsive design</li>
+          <li>Custom HTML, CSS & JavaScript</li>
+        </ul>
+
+      </article>
+
+      <!-- WEB APPS -->
+
+      <article class="service-card reveal">
+
+        <div class="service-icon">▣</div>
+
+        <h3>Web Apps & Dashboards</h3>
+
+        <p>
+          Custom web applications and dashboards for
+          businesses, platforms, tools and online services.
+        </p>
+
+        <ul class="service-list">
+          <li>Admin dashboards</li>
+          <li>User systems</li>
+          <li>Interactive interfaces</li>
+          <li>API-connected apps</li>
+          <li>Responsive layouts</li>
+        </ul>
+
+      </article>
+
+      <!-- WHATSAPP -->
 
       <article class="service-card reveal">
 
@@ -1297,6 +1383,8 @@ footer{
 
       </article>
 
+      <!-- TELEGRAM -->
+
       <article class="service-card reveal">
 
         <div class="service-icon">✈</div>
@@ -1311,11 +1399,13 @@ footer{
         <ul class="service-list">
           <li>Admin systems</li>
           <li>Moderation</li>
-          <li>Inline features</li>
           <li>Custom commands</li>
+          <li>Automation features</li>
         </ul>
 
       </article>
+
+      <!-- AI -->
 
       <article class="service-card reveal">
 
@@ -1325,17 +1415,19 @@ footer{
 
         <p>
           AI-powered systems that connect models,
-          APIs and your existing workflow.
+          APIs and existing workflows.
         </p>
 
         <ul class="service-list">
           <li>AI assistants</li>
-          <li>API integrations</li>
+          <li>AI chat systems</li>
           <li>AI workflows</li>
-          <li>Automation logic</li>
+          <li>Model integrations</li>
         </ul>
 
       </article>
+
+      <!-- API -->
 
       <article class="service-card reveal">
 
@@ -1344,8 +1436,8 @@ footer{
         <h3>API Development</h3>
 
         <p>
-          REST APIs and backend systems designed
-          to connect your applications and services.
+          REST APIs and backend systems designed to
+          connect applications and external services.
         </p>
 
         <ul class="service-list">
@@ -1357,42 +1449,68 @@ footer{
 
       </article>
 
+      <!-- BUG FIXING -->
+
       <article class="service-card reveal">
 
         <div class="service-icon">⚡</div>
 
-        <h3>Bug Fixing</h3>
+        <h3>Bug Fixing & Upgrades</h3>
 
         <p>
-          Find and fix difficult JavaScript,
-          Node.js and bot-related issues.
+          Find and fix JavaScript, Node.js, website,
+          API and bot-related problems.
         </p>
 
         <ul class="service-list">
           <li>Error debugging</li>
           <li>Runtime problems</li>
           <li>Deployment issues</li>
-          <li>Performance fixes</li>
+          <li>Performance improvements</li>
         </ul>
 
       </article>
 
+      <!-- AUTOMATION -->
+
       <article class="service-card reveal">
 
-        <div class="service-icon">▣</div>
+        <div class="service-icon">∞</div>
 
-        <h3>Web Applications</h3>
+        <h3>Business Automation</h3>
 
         <p>
-          Responsive websites and interfaces for
-          products, bots and automation platforms.
+          Connect your tools and automate repetitive
+          tasks with practical custom workflows.
         </p>
 
         <ul class="service-list">
-          <li>Responsive UI</li>
-          <li>Landing pages</li>
-          <li>Dashboards</li>
-          <li>Frontend systems</li>
+          <li>Workflow automation</li>
+          <li>Scheduled tasks</li>
+          <li>Notifications</li>
+          <li>External services</li>
+        </ul>
+
+      </article>
+
+      <!-- UI -->
+
+      <article class="service-card reveal">
+
+        <div class="service-icon">◇</div>
+
+        <h3>Modern UI Development</h3>
+
+        <p>
+          Clean interfaces designed to look professional
+          across phones, tablets and desktop screens.
+        </p>
+
+        <ul class="service-list">
+          <li>Responsive layouts</li>
+          <li>Modern interfaces</li>
+          <li>Animations</li>
+          <li>Mobile-first design</li>
         </ul>
 
       </article>
@@ -1418,20 +1536,22 @@ footer{
       </h2>
 
       <p class="section-description">
-        Every project can be customized depending on
-        the features and technical requirements.
+        Starting prices depend on the complexity, features
+        and technical requirements of each project.
       </p>
 
     </div>
 
     <div class="packages">
 
+      <!-- WEBSITE -->
+
       <article class="package reveal">
 
-        <h3>Starter</h3>
+        <h3>Website Starter</h3>
 
         <p class="package-description">
-          For small automation tasks.
+          For professional websites and landing pages.
         </p>
 
         <div class="price">
@@ -1439,17 +1559,20 @@ footer{
         </div>
 
         <ul>
-          <li>Basic bot feature</li>
-          <li>Simple API integration</li>
-          <li>Basic configuration</li>
-          <li>Bug fixes</li>
+          <li>Custom website design</li>
+          <li>Mobile responsive layout</li>
+          <li>Modern UI</li>
+          <li>Contact section/form</li>
+          <li>Basic deployment assistance</li>
         </ul>
 
         <a href="#contact" class="btn btn-outline">
-          Discuss project
+          Discuss website
         </a>
 
       </article>
+
+      <!-- PROFESSIONAL -->
 
       <article class="package featured reveal">
 
@@ -1460,7 +1583,7 @@ footer{
         <h3>Professional</h3>
 
         <p class="package-description">
-          For complete bot systems.
+          For complete websites, bots and custom systems.
         </p>
 
         <div class="price">
@@ -1468,10 +1591,10 @@ footer{
         </div>
 
         <ul>
-          <li>Custom bot development</li>
-          <li>Multiple commands</li>
+          <li>Custom development</li>
+          <li>Multiple features</li>
           <li>API integrations</li>
-          <li>Database / data handling</li>
+          <li>Database/data handling</li>
           <li>Deployment assistance</li>
         </ul>
 
@@ -1481,12 +1604,14 @@ footer{
 
       </article>
 
+      <!-- ADVANCED -->
+
       <article class="package reveal">
 
         <h3>Advanced</h3>
 
         <p class="package-description">
-          For large automation platforms.
+          For larger platforms and advanced systems.
         </p>
 
         <div class="price">
@@ -1528,19 +1653,22 @@ footer{
       </h2>
 
       <p class="section-description">
-        A selection of bot, automation and software projects.
+        A selection of AI, web, bot, automation and software
+        projects.
       </p>
 
     </div>
 
     <div class="projects">
 
+      <!-- MISS ARIA -->
+
       <article class="project reveal">
 
         <div class="project-top">
 
           <div>
-            <span class="project-number">01 / BOT</span>
+            <span class="project-number">01 / AI PLATFORM</span>
             <h3>Miss Aria AI</h3>
           </div>
 
@@ -1563,12 +1691,44 @@ footer{
 
       </article>
 
+      <!-- WEBSITE -->
+
       <article class="project reveal">
 
         <div class="project-top">
 
           <div>
-            <span class="project-number">02 / AUTOMATION</span>
+            <span class="project-number">02 / WEB</span>
+            <h3>Responsive Websites</h3>
+          </div>
+
+          <span>↗</span>
+
+        </div>
+
+        <p>
+          Professional responsive websites and landing pages
+          designed for businesses, creators, portfolios,
+          products and online services.
+        </p>
+
+        <div class="project-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Responsive</span>
+        </div>
+
+      </article>
+
+      <!-- WHATSAPP -->
+
+      <article class="project reveal">
+
+        <div class="project-top">
+
+          <div>
+            <span class="project-number">03 / AUTOMATION</span>
             <h3>WhatsApp Automation</h3>
           </div>
 
@@ -1591,12 +1751,14 @@ footer{
 
       </article>
 
+      <!-- XFUNDS -->
+
       <article class="project reveal">
 
         <div class="project-top">
 
           <div>
-            <span class="project-number">03 / REWARDS</span>
+            <span class="project-number">04 / WEB PLATFORM</span>
             <h3>XFunds</h3>
           </div>
 
@@ -1619,13 +1781,15 @@ footer{
 
       </article>
 
+      <!-- AI -->
+
       <article class="project reveal">
 
         <div class="project-top">
 
           <div>
-            <span class="project-number">04 / WEB</span>
-            <h3>Developer Platforms</h3>
+            <span class="project-number">05 / AI</span>
+            <h3>AI-Powered Tools</h3>
           </div>
 
           <span>↗</span>
@@ -1633,14 +1797,44 @@ footer{
         </div>
 
         <p>
-          Responsive web interfaces for bots, developer
-          tools, landing pages, dashboards and online services.
+          Custom AI features connected to applications,
+          bots and developer tools through external AI APIs.
         </p>
 
         <div class="project-tags">
-          <span>HTML</span>
-          <span>CSS</span>
+          <span>AI APIs</span>
+          <span>Claude</span>
+          <span>DeepSeek</span>
+          <span>Node.js</span>
+        </div>
+
+      </article>
+
+      <!-- WEB APPS -->
+
+      <article class="project reveal">
+
+        <div class="project-top">
+
+          <div>
+            <span class="project-number">06 / APPLICATION</span>
+            <h3>Custom Web Applications</h3>
+          </div>
+
+          <span>↗</span>
+
+        </div>
+
+        <p>
+          Interactive web applications, dashboards and
+          online platforms built with responsive interfaces
+          and backend integrations.
+        </p>
+
+        <div class="project-tags">
           <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>APIs</span>
           <span>UI</span>
         </div>
 
@@ -1666,6 +1860,11 @@ footer{
         Tools I work with.
       </h2>
 
+      <p class="section-description">
+        A practical stack for building websites, applications,
+        bots, APIs, AI tools and automation systems.
+      </p>
+
     </div>
 
     <div class="skills-layout">
@@ -1674,13 +1873,14 @@ footer{
 
         <div class="skill-category reveal">
 
-          <h3>Languages</h3>
+          <h3>Frontend</h3>
 
           <div class="tech-list">
-            <span class="tech-tag">JavaScript</span>
             <span class="tech-tag">HTML</span>
             <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JSON</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Responsive Design</span>
+            <span class="tech-tag">UI Development</span>
           </div>
 
         </div>
@@ -1694,6 +1894,7 @@ footer{
             <span class="tech-tag">Express</span>
             <span class="tech-tag">REST APIs</span>
             <span class="tech-tag">Webhooks</span>
+            <span class="tech-tag">JSON</span>
           </div>
 
         </div>
@@ -1707,6 +1908,7 @@ footer{
             <span class="tech-tag">Telegraf</span>
             <span class="tech-tag">Cron Jobs</span>
             <span class="tech-tag">Bots</span>
+            <span class="tech-tag">Workflows</span>
           </div>
 
         </div>
@@ -1750,6 +1952,7 @@ footer{
             <span class="tech-tag">Optimization</span>
             <span class="tech-tag">Error Handling</span>
             <span class="tech-tag">System Design</span>
+            <span class="tech-tag">Deployment</span>
           </div>
 
         </div>
@@ -1787,7 +1990,9 @@ footer{
 
       <div class="process-step reveal">
         <span class="process-number">01</span>
+
         <h3>Understand</h3>
+
         <p>
           Understand your idea, requirements and goals.
         </p>
@@ -1795,33 +2000,41 @@ footer{
 
       <div class="process-step reveal">
         <span class="process-number">02</span>
-        <h3>Build</h3>
+
+        <h3>Plan</h3>
+
         <p>
-          Develop the system using the right tools.
+          Decide the features, structure and technology.
         </p>
       </div>
 
       <div class="process-step reveal">
         <span class="process-number">03</span>
-        <h3>Test</h3>
+
+        <h3>Build</h3>
+
         <p>
-          Test features and handle edge cases.
+          Develop the website, app, bot or system.
         </p>
       </div>
 
       <div class="process-step reveal">
         <span class="process-number">04</span>
-        <h3>Optimize</h3>
+
+        <h3>Test</h3>
+
         <p>
-          Improve reliability, performance and UX.
+          Test features, fix problems and improve UX.
         </p>
       </div>
 
       <div class="process-step reveal">
         <span class="process-number">05</span>
+
         <h3>Deploy</h3>
+
         <p>
-          Deploy and help get the project running.
+          Deploy the finished project and help get it running.
         </p>
       </div>
 
@@ -1831,7 +2044,7 @@ footer{
 
 </section>
 
-<!-- ================= TESTIMONIALS ================= -->
+<!-- ================= CLIENT EXPERIENCE ================= -->
 
 <section>
 
@@ -1839,84 +2052,58 @@ footer{
 
     <div class="section-head reveal">
 
-      <div class="eyebrow">Client Experience</div>
+      <div class="eyebrow">Why Work With Me</div>
 
       <h2>
-        Built for clear communication.
+        Focused on useful results.
       </h2>
 
       <p class="section-description">
-        Professional development is more than code.
-        Communication and reliability matter too.
+        Whether it is a website, application, bot or
+        automation system, the goal is to build something
+        useful and maintainable.
       </p>
 
     </div>
 
-    <div class="testimonials">
+    <div class="client-grid">
 
-      <article class="testimonial reveal">
+      <article class="client-card reveal">
 
-        <div class="stars">★★★★★</div>
+        <div class="client-icon">✦</div>
+
+        <h3>Custom Development</h3>
 
         <p>
-          "Clear communication, quick debugging and a
-          practical approach to solving the problem."
+          I build around your requirements instead of
+          forcing your project into a generic template.
         </p>
-
-        <div class="client">
-
-          <div class="avatar">C</div>
-
-          <div>
-            <strong>Client</strong>
-            <small>Automation Project</small>
-          </div>
-
-        </div>
 
       </article>
 
-      <article class="testimonial reveal">
+      <article class="client-card reveal">
 
-        <div class="stars">★★★★★</div>
+        <div class="client-icon">⚡</div>
+
+        <h3>Practical Solutions</h3>
 
         <p>
-          "The project was broken down into understandable
-          steps and the important issues were handled."
+          I focus on solving the actual problem without
+          adding unnecessary complexity.
         </p>
-
-        <div class="client">
-
-          <div class="avatar">D</div>
-
-          <div>
-            <strong>Client</strong>
-            <small>Bot Development</small>
-          </div>
-
-        </div>
 
       </article>
 
-      <article class="testimonial reveal">
+      <article class="client-card reveal">
 
-        <div class="stars">★★★★★</div>
+        <div class="client-icon">◈</div>
+
+        <h3>Clear Communication</h3>
 
         <p>
-          "Focused on getting the system working instead
-          of adding unnecessary complexity."
+          Project requirements, progress and technical
+          issues are kept straightforward and understandable.
         </p>
-
-        <div class="client">
-
-          <div class="avatar">A</div>
-
-          <div>
-            <strong>Client</strong>
-            <small>API Integration</small>
-          </div>
-
-        </div>
 
       </article>
 
@@ -1948,21 +2135,21 @@ footer{
       <div class="about-copy reveal">
 
         <p>
-          Dave Tech focuses on bot development,
-          automation engineering and API-powered
-          applications.
+          Dave Tech builds websites, web applications,
+          bots, AI-powered tools, APIs and automation systems.
         </p>
 
         <p>
-          I enjoy taking an idea that starts as a simple
-          concept and turning it into a working system
-          people can actually use.
+          I can take an idea from a simple concept and
+          turn it into a professional digital product
+          that people can actually use.
         </p>
 
         <p>
-          My approach is practical: understand the problem,
-          build the right solution, test it properly and
-          keep improving it.
+          Whether you need a business website, landing page,
+          portfolio, web application, WhatsApp bot,
+          Telegram bot or AI automation system, I focus
+          on building a solution around your requirements.
         </p>
 
       </div>
@@ -1970,31 +2157,47 @@ footer{
       <div class="about-points">
 
         <div class="about-point reveal">
-          <strong>Custom Development</strong>
+
+          <strong>Website Development</strong>
+
           <span>
-            Solutions designed around the actual project.
+            Professional responsive websites for businesses,
+            creators, portfolios and online services.
           </span>
+
         </div>
 
         <div class="about-point reveal">
-          <strong>Clean Communication</strong>
+
+          <strong>Full-Stack Development</strong>
+
           <span>
-            Clear updates and straightforward explanations.
+            Frontend interfaces connected to APIs,
+            backend systems and data.
           </span>
+
         </div>
 
         <div class="about-point reveal">
-          <strong>Practical Architecture</strong>
+
+          <strong>AI & Automation</strong>
+
           <span>
-            Avoid unnecessary complexity where possible.
+            AI-powered tools and automated workflows
+            connected to real applications.
           </span>
+
         </div>
 
         <div class="about-point reveal">
-          <strong>Long-Term Thinking</strong>
+
+          <strong>Custom Solutions</strong>
+
           <span>
-            Build systems that can be improved later.
+            Development based on the project's actual
+            requirements rather than unnecessary features.
           </span>
+
         </div>
 
       </div>
@@ -2023,6 +2226,44 @@ footer{
 
     <div class="faq">
 
+      <!-- WEBSITE FAQ -->
+
+      <details class="reveal">
+
+        <summary>
+          Can you create a website from scratch?
+        </summary>
+
+        <p>
+          Yes. I can create professional websites from
+          scratch for businesses, portfolios, creators,
+          startups and online services. Websites can be
+          responsive across phones, tablets and desktops,
+          with custom sections, forms, animations and
+          API integrations when needed.
+        </p>
+
+      </details>
+
+      <!-- WEB APP -->
+
+      <details class="reveal">
+
+        <summary>
+          Can you build a web application?
+        </summary>
+
+        <p>
+          Yes. I can build custom web applications,
+          dashboards and online platforms with responsive
+          interfaces, backend functionality and API
+          integrations.
+        </p>
+
+      </details>
+
+      <!-- BOTS -->
+
       <details class="reveal">
 
         <summary>
@@ -2037,6 +2278,8 @@ footer{
 
       </details>
 
+      <!-- EXISTING PROJECT -->
+
       <details class="reveal">
 
         <summary>
@@ -2044,12 +2287,30 @@ footer{
         </summary>
 
         <p>
-          Yes. I can inspect an existing Node.js or
-          JavaScript project, fix bugs, add features,
+          Yes. I can inspect an existing JavaScript or
+          Node.js project, fix bugs, add features,
           integrate APIs or improve existing systems.
         </p>
 
       </details>
+
+      <!-- AI -->
+
+      <details class="reveal">
+
+        <summary>
+          Do you build AI integrations?
+        </summary>
+
+        <p>
+          Yes. AI APIs can be integrated into websites,
+          web applications, bots, automation workflows
+          and custom developer tools.
+        </p>
+
+      </details>
+
+      <!-- DEPLOY -->
 
       <details class="reveal">
 
@@ -2064,18 +2325,7 @@ footer{
 
       </details>
 
-      <details class="reveal">
-
-        <summary>
-          Do you build AI integrations?
-        </summary>
-
-        <p>
-          Yes. AI APIs can be integrated into bots,
-          websites, automation workflows and custom tools.
-        </p>
-
-      </details>
+      <!-- START -->
 
       <details class="reveal">
 
@@ -2085,8 +2335,9 @@ footer{
 
         <p>
           Send me a message describing what you want built,
-          what platform you need and any important features.
-          I'll review the requirements and discuss the next step.
+          the platform you need, important features and
+          any deadline or budget information. I'll review
+          the requirements and discuss the next step.
         </p>
 
       </details>
@@ -2113,8 +2364,8 @@ footer{
       </h2>
 
       <p class="section-description">
-        Tell me what you're trying to build, what problem
-        you're solving and what features you need.
+        Need a website, web app, bot, AI tool or automation
+        system? Tell me what you're trying to build.
       </p>
 
     </div>
@@ -2123,7 +2374,9 @@ footer{
 
       <div class="contact-info">
 
-        <h3>Let's talk about your project.</h3>
+        <h3>
+          Let's talk about your project.
+        </h3>
 
         <p>
           Telegram is the fastest way to reach me.
@@ -2154,6 +2407,8 @@ footer{
 
       </div>
 
+      <!-- CONTACT FORM -->
+
       <form id="contactForm">
 
         <div class="form-row">
@@ -2177,7 +2432,7 @@ footer{
         <input
           type="text"
           name="projectType"
-          placeholder="What do you need built?"
+          placeholder="What do you need built? e.g. Website, Bot, AI App..."
         >
 
         <textarea
@@ -2197,6 +2452,7 @@ footer{
         <p
           class="form-status"
           id="formStatus"
+          aria-live="polite"
         ></p>
 
       </form>
@@ -2217,7 +2473,7 @@ footer{
 
     <div>
       © <span id="year"></span> DAVE TECH
-      — Bot Developer & Automation Engineer
+      — Full-Stack Developer & AI Automation Engineer
     </div>
 
     <div class="footer-links">
@@ -2242,14 +2498,22 @@ document.getElementById("year").textContent =
 
 /* ================= THEME ================= */
 
-const body = document.body;
-const themeToggle = document.getElementById("themeToggle");
+const body =
+  document.body;
+
+const themeToggle =
+  document.getElementById("themeToggle");
 
 const savedTheme =
   localStorage.getItem("dave-tech-theme");
 
-if(savedTheme){
-  body.setAttribute("data-theme", savedTheme);
+if(savedTheme === "light" || savedTheme === "dark"){
+
+  body.setAttribute(
+    "data-theme",
+    savedTheme
+  );
+
 }
 
 themeToggle.addEventListener("click", () => {
@@ -2262,7 +2526,10 @@ themeToggle.addEventListener("click", () => {
       ? "light"
       : "dark";
 
-  body.setAttribute("data-theme", next);
+  body.setAttribute(
+    "data-theme",
+    next
+  );
 
   localStorage.setItem(
     "dave-tech-theme",
@@ -2282,61 +2549,99 @@ const mobileMenu =
 
 menuBtn.addEventListener("click", () => {
 
-  mobileMenu.classList.toggle("active");
-  body.classList.toggle("menu-open");
+  const active =
+    mobileMenu.classList.toggle("active");
+
+  body.classList.toggle(
+    "menu-open",
+    active
+  );
 
   menuBtn.textContent =
-    mobileMenu.classList.contains("active")
-      ? "×"
-      : "☰";
+    active ? "×" : "☰";
 
 });
 
-document.querySelectorAll(".mobile-menu a")
-.forEach(link => {
+document
+  .querySelectorAll(".mobile-menu a")
+  .forEach(link => {
 
-  link.addEventListener("click", () => {
+    link.addEventListener("click", () => {
+
+      mobileMenu.classList.remove("active");
+
+      body.classList.remove("menu-open");
+
+      menuBtn.textContent = "☰";
+
+    });
+
+  });
+
+
+/* ================= ESCAPE MOBILE MENU ================= */
+
+document.addEventListener("keydown", event => {
+
+  if(event.key === "Escape"){
 
     mobileMenu.classList.remove("active");
+
     body.classList.remove("menu-open");
 
     menuBtn.textContent = "☰";
 
-  });
+  }
 
 });
 
 
 /* ================= SCROLL REVEAL ================= */
 
-const observer =
-  new IntersectionObserver(
-    entries => {
+const revealElements =
+  document.querySelectorAll(".reveal");
 
-      entries.forEach(entry => {
+if("IntersectionObserver" in window){
 
-        if(entry.isIntersecting){
+  const observer =
+    new IntersectionObserver(
+      entries => {
 
-          entry.target.classList.add("show");
+        entries.forEach(entry => {
 
-          observer.unobserve(entry.target);
+          if(entry.isIntersecting){
 
-        }
+            entry.target.classList.add("show");
 
-      });
+            observer.unobserve(
+              entry.target
+            );
 
-    },
-    {
-      threshold:.12
-    }
-  );
+          }
 
-document.querySelectorAll(".reveal")
-.forEach(element => {
+        });
 
-  observer.observe(element);
+      },
+      {
+        threshold:.12
+      }
+    );
 
-});
+  revealElements.forEach(element => {
+
+    observer.observe(element);
+
+  });
+
+}else{
+
+  revealElements.forEach(element => {
+
+    element.classList.add("show");
+
+  });
+
+}
 
 
 /* ================= CONTACT FORM ================= */
@@ -2351,90 +2656,110 @@ const formStatus =
   document.getElementById("formStatus");
 
 
-form.addEventListener("submit", async event => {
+form.addEventListener(
+  "submit",
+  async event => {
 
-  event.preventDefault();
+    event.preventDefault();
 
-  sendBtn.disabled = true;
-  sendBtn.textContent = "Sending...";
+    sendBtn.disabled = true;
 
-  formStatus.textContent = "";
+    sendBtn.textContent =
+      "Sending...";
 
-  const formData =
-    new FormData(form);
+    formStatus.textContent = "";
 
-  const data = {
+    const formData =
+      new FormData(form);
 
-    name: formData.get("name"),
-    email: formData.get("email"),
-    projectType:
-      formData.get("projectType") ||
-      "Not specified",
-    message:
-      formData.get("message")
+    const data = {
 
-  };
+      name:
+        formData.get("name"),
 
-  try{
+      email:
+        formData.get("email"),
 
-    const response =
-      await fetch(
-        "https://formspree.io/f/mvkgzgew",
-        {
-          method:"POST",
+      projectType:
+        formData.get("projectType") ||
+        "Not specified",
 
-          headers:{
-            "Content-Type":
-              "application/json",
+      message:
+        formData.get("message")
 
-            "Accept":
-              "application/json"
-          },
+    };
 
-          body:JSON.stringify(data)
-        }
-      );
+    try{
 
-    if(!response.ok){
+      const response =
+        await fetch(
+          "https://formspree.io/f/mvkgzgew",
+          {
+            method:"POST",
 
-      const result =
-        await response
-          .json()
-          .catch(() => ({}));
+            headers:{
+              "Content-Type":
+                "application/json",
 
-      const errorMessage =
-        (result.errors || [])
-          .map(error => error.message)
-          .join(", ");
+              "Accept":
+                "application/json"
+            },
 
-      throw new Error(
-        errorMessage ||
-        "Unable to send your message."
-      );
+            body:
+              JSON.stringify(data)
+          }
+        );
+
+      if(!response.ok){
+
+        const result =
+          await response
+            .json()
+            .catch(() => ({}));
+
+        const errorMessage =
+          (result.errors || [])
+            .map(
+              error =>
+                error.message
+            )
+            .join(", ");
+
+        throw new Error(
+          errorMessage ||
+          "Unable to send your message."
+        );
+
+      }
+
+      formStatus.textContent =
+        "✓ Message sent successfully. I'll get back to you.";
+
+      formStatus.style.color =
+        "var(--success)";
+
+      form.reset();
+
+    }catch(error){
+
+      formStatus.textContent =
+        error.message ||
+        "Something went wrong. Please try again.";
+
+      formStatus.style.color =
+        "var(--danger)";
+
+    }finally{
+
+      sendBtn.disabled = false;
+
+      sendBtn.textContent =
+        "Send project request →";
 
     }
 
-    formStatus.textContent =
-      "✓ Message sent successfully. I'll get back to you.";
-
-    form.reset();
-
-  }catch(error){
-
-    formStatus.textContent =
-      error.message ||
-      "Something went wrong. Please try again.";
-
-  }finally{
-
-    sendBtn.disabled = false;
-
-    sendBtn.textContent =
-      "Send project request →";
-
   }
-
-});
+);
 
 </script>
 
